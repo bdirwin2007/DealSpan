@@ -1,0 +1,27 @@
+{
+  "id": "clearwater-hvac",
+  "buyer": {"name": "Northcoast Mechanical Inc. (FICTIONAL)", "industry": "hvac", "revenue_usd": "6800000", "ebitda_usd": "1150000", "cash_available_usd": "420000", "existing_debt_service_usd": "210000"},
+  "target": {
+    "name": "Clearwater HVAC Services Inc. (FICTIONAL)", "industry": "hvac", "location": "Southwest Ohio", "years_in_business": 27,
+    "asking_price_usd": "1480000", "manager_salary_usd": "95000",
+    "sources": {"claim": "Confidential information memorandum p.6-7", "pnl": "Accountant-reviewed P&L", "tax": "Form 1120-S", "bank": "Business checking statements"},
+    "financials": [
+      {"period": "FY2024", "claimed_revenue_usd": "2310000", "tax_revenue_usd": "2306500"},
+      {"period": "FY2025", "claimed_revenue_usd": "2450000", "pnl_revenue_usd": "2450000", "tax_revenue_usd": "2447600", "bank_deposits_usd": "2461000",
+       "claimed_sde_usd": "522000", "pnl_net_income_usd": "270400", "tax_net_income_usd": "268000", "top_customer_revenue_usd": "221000"}
+    ],
+    "addbacks": [
+      {"period": "FY2025", "category": "owner_salary", "description": "Owner salary (M. Ortiz)", "amount_usd": "120000", "documented": "yes", "buyer_must_replace": "no", "source": "Payroll register FY2025"},
+      {"period": "FY2025", "category": "depreciation", "description": "Depreciation", "amount_usd": "62000", "documented": "yes", "buyer_must_replace": "no", "source": "Form 1120-S line 14"},
+      {"period": "FY2025", "category": "interest", "description": "Interest expense", "amount_usd": "18000", "documented": "yes", "buyer_must_replace": "no", "source": "Form 1120-S line 13"},
+      {"period": "FY2025", "category": "personal", "description": "Owner vehicle", "amount_usd": "11600", "documented": "yes", "buyer_must_replace": "no", "source": "Vehicle lease agreement"},
+      {"period": "FY2025", "category": "one_time", "description": "Warehouse relocation", "amount_usd": "40000", "documented": "yes", "buyer_must_replace": "no", "source": "Moving and build-out invoices"}
+    ],
+    "qualitative": {"owner_relationships": "no", "manager_in_place": "yes", "owner_hours": 40, "key_employees_staying": "yes", "recurring_revenue_pct": 55,
+      "industry_outlook": "growing", "lease_transferable": "yes", "licenses_transferable": "yes", "customer_contracts_signed": "yes",
+      "seller_transition_months": 6, "reason_for_sale": "retirement", "pending_legal_issues": "no"}
+  },
+  "financing": {"down_payment_bps": 1000, "seller_note_bps": 1000, "sba_rate_bps": 1050, "sba_term_months": 120, "seller_note_rate_bps": 600, "seller_note_term_months": 60, "closing_costs_bps": 300, "target_dscr": "1.30", "sba_min_dscr": "1.15", "stress_bps": 300},
+  "valuation": {"growth_bps": 400, "terminal_growth_bps": 250, "tax_rate_bps": 2500, "capex_bps": 150, "nwc_bps": 1000, "risk_free_bps": 450, "equity_premium_bps": 500, "size_premium_bps": 1000, "specific_risk_bps": 300, "comps_size_discount_bps": 7000, "target_irr_bps": 2500},
+  "synergies": {"cost_savings_usd": "60000", "revenue_synergy_usd": "250000", "integration_cost_usd": "40000", "revenue_realization_bps": 7700, "cost_realization_bps": 10000}
+}

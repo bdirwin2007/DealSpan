@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 32" width="40" height="32" role="img" aria-label="DealSpan">
+  <rect x="2" y="9" width="6" height="21" fill="#14213D"/>
+  <rect x="32" y="9" width="6" height="21" fill="#14213D"/>
+  <rect x="0" y="3" width="40" height="6" fill="#D62839"/>
+  <rect x="12" y="15" width="16" height="3" fill="#14213D" opacity=".35"/>
+</svg>

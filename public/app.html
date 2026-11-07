@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DealSpan · New deal</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header class="nav"><div class="wrap">
+  <a class="brand" href="/"><img src="/logo.svg" alt=""><span>Deal<b>Span</b></span></a>
+  <nav><button class="btn ghost small" id="saveDeal" type="button">Save deal file</button><label class="btn ghost small" style="cursor:pointer">Open deal file<input id="openDeal" type="file" accept=".json" hidden></label></nav>
+</div></header>
+<div class="wrap app">
+  <aside class="rail">
+    <ol id="steps"></ol>
+    <div class="samples"><b>Load a sample deal</b><span class="muted"> (all fictional)</span>
+      <button data-sample="buckeye-landscaping">Buckeye Lawn &amp; Landscape<br><small class="muted">Landscaping · $1.15M</small></button>
+      <button data-sample="clearwater-hvac">Clearwater HVAC<br><small class="muted">HVAC · $1.48M</small></button>
+      <button data-sample="maple-street-diner">Maple Street Diner<br><small class="muted">Restaurant · $425K</small></button>
+      <button data-sample="blank">Start blank</button>
+    </div>
+  </aside>
+  <main id="panel" class="panel" aria-live="polite"></main>
+</div>
+<footer class="foot"><div class="wrap">DealSpan is a screening and education tool, not a valuation opinion, quality-of-earnings report or financial advice. Demo companies and market data are fictional.</div></footer>
+<script src="/app.js"></script>
+</body>
+</html>

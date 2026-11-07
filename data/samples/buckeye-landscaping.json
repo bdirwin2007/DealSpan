@@ -1,0 +1,33 @@
+{
+  "id": "buckeye-landscaping",
+  "buyer": {"name": "Summit Outdoor Services (FICTIONAL)", "industry": "landscaping", "revenue_usd": "3400000", "ebitda_usd": "520000", "cash_available_usd": "260000", "existing_debt_service_usd": "140000"},
+  "target": {
+    "name": "Buckeye Lawn & Landscape LLC (FICTIONAL)", "industry": "landscaping", "location": "Northeast Ohio", "years_in_business": 18,
+    "asking_price_usd": "1150000", "manager_salary_usd": "85000",
+    "sources": {"claim": "Broker listing packet p.3-4", "pnl": "QuickBooks P&L", "tax": "Form 1120-S", "bank": "Business checking statements"},
+    "financials": [
+      {"period": "FY2023", "claimed_revenue_usd": "1620000", "tax_revenue_usd": "1618400"},
+      {"period": "FY2024", "claimed_revenue_usd": "1760000", "tax_revenue_usd": "1757900"},
+      {"period": "FY2025", "claimed_revenue_usd": "1905000", "pnl_revenue_usd": "1905000", "tax_revenue_usd": "1858000", "bank_deposits_usd": "1882300",
+       "claimed_sde_usd": "410000", "pnl_net_income_usd": "171000", "tax_net_income_usd": "158200", "top_customer_revenue_usd": "412000"}
+    ],
+    "addbacks": [
+      {"period": "FY2025", "category": "owner_salary", "description": "Owner salary (D. Kessler)", "amount_usd": "95000", "documented": "yes", "buyer_must_replace": "no", "source": "Payroll register FY2025"},
+      {"period": "FY2025", "category": "depreciation", "description": "Depreciation", "amount_usd": "48500", "documented": "yes", "buyer_must_replace": "no", "source": "Form 1120-S line 14"},
+      {"period": "FY2025", "category": "interest", "description": "Interest on equipment loans", "amount_usd": "12300", "documented": "yes", "buyer_must_replace": "no", "source": "Form 1120-S line 13"},
+      {"period": "FY2025", "category": "personal", "description": "Owner personal truck and fuel", "amount_usd": "14200", "documented": "yes", "buyer_must_replace": "no", "source": "Fuel card statements"},
+      {"period": "FY2025", "category": "family_payroll", "description": "Spouse payroll - bookkeeping", "amount_usd": "38000", "documented": "yes", "buyer_must_replace": "yes", "source": "Payroll register FY2025"},
+      {"period": "FY2025", "category": "one_time", "description": "Mower fleet overhaul", "amount_usd": "18000", "documented": "yes", "buyer_must_replace": "no", "source": "Vendor invoice INV-2207"},
+      {"period": "FY2025", "category": "one_time", "description": "Legal fees - lease dispute", "amount_usd": "6000", "documented": "no", "buyer_must_replace": "no", "source": "Broker listing packet p.4"},
+      {"period": "FY2025", "category": "pro_forma", "description": "Projected savings from route optimization", "amount_usd": "7000", "documented": "no", "buyer_must_replace": "no", "source": "Broker listing packet p.4"},
+      {"period": "FY2024", "category": "one_time", "description": "Mower fleet overhaul", "amount_usd": "16500", "documented": "yes", "buyer_must_replace": "no", "source": "Vendor invoice INV-1984"},
+      {"period": "FY2023", "category": "one_time", "description": "Mower fleet overhaul", "amount_usd": "15800", "documented": "yes", "buyer_must_replace": "no", "source": "Vendor invoice INV-1731"}
+    ],
+    "qualitative": {"owner_relationships": "partly", "manager_in_place": "no", "owner_hours": 55, "key_employees_staying": "unknown", "recurring_revenue_pct": 45,
+      "industry_outlook": "stable", "lease_transferable": "unknown", "licenses_transferable": "no", "customer_contracts_signed": "no",
+      "seller_transition_months": 6, "reason_for_sale": "retirement", "pending_legal_issues": "no"}
+  },
+  "financing": {"down_payment_bps": 1000, "seller_note_bps": 1000, "sba_rate_bps": 1050, "sba_term_months": 120, "seller_note_rate_bps": 600, "seller_note_term_months": 60, "closing_costs_bps": 300, "target_dscr": "1.30", "sba_min_dscr": "1.15", "stress_bps": 300},
+  "valuation": {"growth_bps": 300, "terminal_growth_bps": 250, "tax_rate_bps": 2500, "capex_bps": 150, "nwc_bps": 1000, "risk_free_bps": 450, "equity_premium_bps": 500, "size_premium_bps": 1000, "specific_risk_bps": 500, "comps_size_discount_bps": 7000, "target_irr_bps": 2500},
+  "synergies": {"cost_savings_usd": "45000", "revenue_synergy_usd": "120000", "integration_cost_usd": "30000", "revenue_realization_bps": 7700, "cost_realization_bps": 10000}
+}

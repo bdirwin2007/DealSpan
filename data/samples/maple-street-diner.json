@@ -1,0 +1,26 @@
+{
+  "id": "maple-street-diner",
+  "buyer": {"name": "Heartland Hospitality Group (FICTIONAL)", "industry": "restaurant", "revenue_usd": "2200000", "ebitda_usd": "240000", "cash_available_usd": "120000", "existing_debt_service_usd": "90000"},
+  "target": {
+    "name": "Maple Street Diner (FICTIONAL)", "industry": "restaurant", "location": "Central Ohio", "years_in_business": 22,
+    "asking_price_usd": "425000", "manager_salary_usd": "55000",
+    "sources": {"claim": "Seller one-page summary", "pnl": "Owner-prepared P&L", "tax": "Schedule C", "bank": "Business checking statements"},
+    "financials": [
+      {"period": "FY2024", "claimed_revenue_usd": "935000", "tax_revenue_usd": "871000"},
+      {"period": "FY2025", "claimed_revenue_usd": "980000", "pnl_revenue_usd": "980000", "tax_revenue_usd": "862000", "bank_deposits_usd": "841500",
+       "claimed_sde_usd": "165000", "pnl_net_income_usd": "41000", "tax_net_income_usd": "18500"}
+    ],
+    "addbacks": [
+      {"period": "FY2025", "category": "owner_salary", "description": "Owner draw", "amount_usd": "60000", "documented": "yes", "buyer_must_replace": "no", "source": "Schedule C"},
+      {"period": "FY2025", "category": "depreciation", "description": "Depreciation", "amount_usd": "14000", "documented": "yes", "buyer_must_replace": "no", "source": "Schedule C line 13"},
+      {"period": "FY2025", "category": "interest", "description": "Interest on equipment loan", "amount_usd": "6000", "documented": "yes", "buyer_must_replace": "no", "source": "Schedule C line 16b"},
+      {"period": "FY2025", "category": "one_time", "description": "Walk-in cooler replacement", "amount_usd": "22000", "documented": "no", "buyer_must_replace": "no", "source": "Seller one-page summary"},
+      {"period": "FY2025", "category": "personal", "description": "Owner meals and family phone plan", "amount_usd": "9000", "documented": "no", "buyer_must_replace": "no", "source": "Seller one-page summary"},
+      {"period": "FY2025", "category": "other", "description": "Unreported cash sales", "amount_usd": "13000", "documented": "no", "buyer_must_replace": "no", "source": "Seller one-page summary"}
+    ],
+    "qualitative": {"owner_relationships": "yes", "manager_in_place": "no", "owner_hours": 70, "key_employees_staying": "unknown", "recurring_revenue_pct": 0,
+      "industry_outlook": "stable", "lease_transferable": "no", "licenses_transferable": "unknown", "customer_contracts_signed": "na",
+      "seller_transition_months": 1, "reason_for_sale": "declining_business", "pending_legal_issues": "unknown"}
+  },
+  "financing": {}, "valuation": {}, "synergies": {"cost_savings_usd": "15000", "revenue_synergy_usd": "0", "integration_cost_usd": "10000"}
+}
