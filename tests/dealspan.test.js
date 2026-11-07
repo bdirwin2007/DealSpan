@@ -21,7 +21,12 @@ test('1. valid input: Buckeye add-on acquisition produces exact verified earning
   for (const b of r.football) assert.ok(minor(b.low) <= minor(b.mid) && minor(b.mid) <= minor(b.high), b.method + ' bar is ordered');
   // Every method values the business lower on verified earnings than on the seller's numbers
   for (const b of r.football) assert.ok(minor(b.mid) < minor(b.sellerMid), b.method + ' verified < seller');
-  assert.ok(r.findings.some(f => f.area === 'Qualitative') && r.findings.some(f => f.area === 'Earnings'));
+  assert.ok(r.findings.some(f => f.area === 'Fit & risk') && r.findings.some(f => f.area === 'Earnings'));
+  // Comps use the cited Damodaran sector multiple, never the raw public multiple
+  assert.equal(r.marketData.comps.multiple, '14.26x');
+  assert.match(r.marketData.comps.source, /Damodaran/);
+  assert.ok(minor(r.verified.comps.high) < minor(r.verified.ebitda) * 6n, 'size discount applied');
+  assert.ok(r.sellerQuestions.length >= 5 && r.sellerQuestions.some(q => q.includes('Mower fleet overhaul')));
 });
 
 test('1b. clean deal PROCEEDs, weak deal WALKs', async () => {
@@ -71,6 +76,10 @@ test('3a. bridge, DCF and sources & uses reconcile exactly', async () => {
   const s = r.verified.lbo.sources;
   assert.equal(minor(s.buyerEquity) + minor(s.sellerNote) + minor(s.sbaLoan), minor(r.recommendation.askingPrice));
   for (const f of r.findings) for (const e of f.evidence) assert.ok(e.field && e.document, 'finding cites a field and document');
+  // Synergy items add up to the kept total; grid centers equal the headline values
+  assert.equal(r.synergy.items.reduce((t, i) => t + minor(i.kept), 0n), minor(r.synergy.keptTotal));
+  assert.equal(r.verified.dcf.grid.values[2][2], r.verified.dcf.enterpriseValue);
+  assert.equal(r.verified.lbo.grid.irr[2][2], r.verified.lbo.irr);
 });
 
 test('3b. loan math matches the amortization formula; schedule pays off; IRR is correct', () => {

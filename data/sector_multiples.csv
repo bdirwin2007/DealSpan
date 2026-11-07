@@ -1,0 +1,6 @@
+industry,damodaran_sector,ev_ebitda_positive,firms,as_of,source_url
+landscaping,Business & Consumer Services,14.26,155,January 2026,https://pages.stern.nyu.edu/adamodar/New_Home_Page/datafile/vebitda.html
+commercial_cleaning,Business & Consumer Services,14.26,155,January 2026,https://pages.stern.nyu.edu/adamodar/New_Home_Page/datafile/vebitda.html
+hvac,Engineering/Construction,17.18,48,January 2026,https://pages.stern.nyu.edu/adamodar/New_Home_Page/datafile/vebitda.html
+restaurant,Restaurant/Dining,17.49,64,January 2026,https://pages.stern.nyu.edu/adamodar/New_Home_Page/datafile/vebitda.html
+auto_repair,Retail (Automotive),14.79,34,January 2026,https://pages.stern.nyu.edu/adamodar/New_Home_Page/datafile/vebitda.html

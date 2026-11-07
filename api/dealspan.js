@@ -13,7 +13,7 @@ async function readBody(req) {
   return JSON.parse(Buffer.concat(chunks).toString() || '{}');
 }
 const schema = () => ({industries: INDUSTRIES, addbackCategories: ADDBACK_CATEGORIES, defaults: DEFAULTS,
-  questions: QUESTIONS.map(q => ({id: q.id, label: q.label, why: q.why, type: q.type || 'choice', options: q.options ? Object.keys(q.options) : null})), samples: SAMPLE_IDS});
+  questions: QUESTIONS.map(q => ({id: q.id, group: q.group, label: q.label, why: q.why, type: q.type || 'choice', options: q.options ? Object.keys(q.options) : null})), samples: SAMPLE_IDS});
 const safeName = s => String(s || 'deal').replace(/\(FICTIONAL\)/g, '').replace(/[^A-Za-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 60) || 'deal';
 
 export default async function handler(req, res) {
